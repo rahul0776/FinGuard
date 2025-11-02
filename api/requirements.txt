@@ -1,0 +1,9 @@
+fastapi==0.109.0
+mangum==0.17.0
+boto3==1.34.20
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+# Rules-based scoring (scoring_simple.py) - no ML dependencies required
+# ML components available in scoring.py but not deployed due to Lambda size constraints
+

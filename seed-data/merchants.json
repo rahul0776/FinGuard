@@ -1,0 +1,1402 @@
+[
+  {
+    "merchant_id": "MRCH-1000",
+    "name": "GameVault",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 6.587679115070655,
+      "lon": 3.281264348284645,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1001",
+    "name": "Gadget Galaxy",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 19.45507838596264,
+      "lon": 72.59820886201422,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1002",
+    "name": "FarmFresh",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": 29.61267363904483,
+      "lon": -95.16622351850117,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1003",
+    "name": "EZBuy - Houston",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 29.95772253754773,
+      "lon": -94.93442746674256,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1004",
+    "name": "QuickMeds",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": -23.463271148554128,
+      "lon": -46.8713878419302,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1005",
+    "name": "General Store",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 33.623467910428225,
+      "lon": -111.80720065508079,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1006",
+    "name": "EZBuy",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": -23.052582232557626,
+      "lon": -46.424342061700145,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1007",
+    "name": "EZBuy",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 36.02815265900678,
+      "lon": 139.7958885305819,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1008",
+    "name": "InvestPro",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": -23.42182184166859,
+      "lon": -46.779249721688366,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1009",
+    "name": "GameVault",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 33.05244166196337,
+      "lon": -111.60306796702555,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1010",
+    "name": "DateNow",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": 33.04236482525185,
+      "lon": -112.4258146275404,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1011",
+    "name": "Odds & Ends",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 51.14598501132339,
+      "lon": 0.24519226605229485,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1012",
+    "name": "DirectDeal",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 6.125275839523848,
+      "lon": 3.466176265045014,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1013",
+    "name": "Value Center",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": 35.523178740459244,
+      "lon": 139.63194417475685,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1014",
+    "name": "HealthPlus Pharmacy",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 19.00742090164732,
+      "lon": 72.46301831884641,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1015",
+    "name": "Odds & Ends",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 33.87526561575026,
+      "lon": -111.57856911759683,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1016",
+    "name": "Pizza Palace",
+    "mcc": "5812",
+    "category": "Restaurants",
+    "risk_level": "LOW",
+    "avg_amount": 45,
+    "geo": {
+      "lat": 29.62666335825979,
+      "lon": -95.79744356379767,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1017",
+    "name": "Virtual Arena",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 6.057813355772973,
+      "lon": 3.1686942865595493,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1018",
+    "name": "TradeFast Securities - Mumbai",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 19.238633385165695,
+      "lon": 73.2964670966917,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1019",
+    "name": "MegaMart - S\u00e3o Paulo",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": -23.886807202822173,
+      "lon": -46.79942255184288,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1020",
+    "name": "SpeedFuel",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": 34.44383592454355,
+      "lon": -118.02255621316348,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1021",
+    "name": "QuickStop Grocers",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": -23.847404970055088,
+      "lon": -46.680272183901074,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1022",
+    "name": "InvestPro - S\u00e3o Paulo",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": -23.87571818593942,
+      "lon": -46.5466145260277,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1023",
+    "name": "General Store",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": -23.88366705225218,
+      "lon": -46.50933421325176,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1024",
+    "name": "Sushi Express",
+    "mcc": "5812",
+    "category": "Restaurants",
+    "risk_level": "LOW",
+    "avg_amount": 45,
+    "geo": {
+      "lat": 51.486146438850064,
+      "lon": -0.27305851220762123,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1025",
+    "name": "HomeShop Network - Tokyo",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 35.28292791224351,
+      "lon": 139.9971577807529,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1026",
+    "name": "Gadget Galaxy",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 19.148227129710413,
+      "lon": 72.67441575496326,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1027",
+    "name": "HomeShop Network",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 33.74600999273185,
+      "lon": -118.63811688919344,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1028",
+    "name": "QuickStop Grocers",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": 29.849253794802237,
+      "lon": -95.32059412597256,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1029",
+    "name": "InvestPro",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 18.635085358500067,
+      "lon": 72.43326032786135,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1030",
+    "name": "Virtual Arena",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 36.090186617017835,
+      "lon": 139.9812605014728,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1031",
+    "name": "StockMasters",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 51.569480028342355,
+      "lon": 0.36055519331313957,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1032",
+    "name": "LoveConnect - Houston",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": 30.107175824889183,
+      "lon": -95.82843642363105,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1033",
+    "name": "InvestPro",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 51.324840488288366,
+      "lon": -0.34881347453604705,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1034",
+    "name": "ElectroMart",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 6.369384358767222,
+      "lon": 3.7499875039767527,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1035",
+    "name": "QuickStop Grocers - Lagos",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": 6.087459065343082,
+      "lon": 3.494034896708053,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1036",
+    "name": "Variety Shop",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 35.52440320636433,
+      "lon": 140.1160397938693,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1037",
+    "name": "MatchMaker Pro - S\u00e3o Paulo",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": -23.444765101762414,
+      "lon": -46.21065147971124,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1038",
+    "name": "DateNow",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": -23.32455382842996,
+      "lon": -46.58874463145609,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1039",
+    "name": "The Big Store - Los Angeles",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": 34.51097671386268,
+      "lon": -118.69701646462393,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1040",
+    "name": "Premium Petro - Lagos",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": 6.611716101189759,
+      "lon": 3.6739575706475867,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1041",
+    "name": "LoveConnect - Houston",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": 29.76520824599282,
+      "lon": -95.85240057829328,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1042",
+    "name": "FarmFresh",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": -23.994061534451756,
+      "lon": -46.290124990814036,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1043",
+    "name": "Digital Dreams",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 41.56008009726074,
+      "lon": -87.92186171977966,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1044",
+    "name": "PlayZone - Lagos",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 6.183455462360491,
+      "lon": 3.5873769005327927,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1045",
+    "name": "LoveConnect",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": 51.04665912455369,
+      "lon": -0.5630462581476959,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1046",
+    "name": "GameVault - London",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 51.135547757696266,
+      "lon": 0.23461998683148358,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1047",
+    "name": "Everything Plus - London",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 51.15626096530904,
+      "lon": 0.3019540365607134,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1048",
+    "name": "MatchMaker Pro",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": 6.63634933145754,
+      "lon": 3.7650566293598438,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1049",
+    "name": "Digital Dreams",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 33.93433527501861,
+      "lon": -118.10100650780684,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1050",
+    "name": "Gadget Galaxy",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": -23.24068165350251,
+      "lon": -46.675589737087435,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1051",
+    "name": "Virtual Arena",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 29.661458500207626,
+      "lon": -95.85763228832407,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1052",
+    "name": "TechZone - Mumbai",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 19.16562619588095,
+      "lon": 73.06299037376981,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1053",
+    "name": "QuickStop Grocers",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": 29.276471816592476,
+      "lon": -95.23639139839706,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1054",
+    "name": "PlayZone - Los Angeles",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 34.03002716879276,
+      "lon": -117.80195129790567,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1055",
+    "name": "FuelStop - Phoenix",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": 33.04173644261991,
+      "lon": -111.83690894405072,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1056",
+    "name": "MarketPlace365",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 40.93274127454654,
+      "lon": -73.87294459998299,
+      "city": "New York",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1057",
+    "name": "EZBuy",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 18.77853120907236,
+      "lon": 72.7288375451339,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1058",
+    "name": "Value Center - S\u00e3o Paulo",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": -23.19287501232687,
+      "lon": -46.19271318027832,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1059",
+    "name": "QuickMeds",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 40.269204205847664,
+      "lon": -73.63315266913088,
+      "city": "New York",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1060",
+    "name": "Taco Town - Tokyo",
+    "mcc": "5812",
+    "category": "Restaurants",
+    "risk_level": "LOW",
+    "avg_amount": 45,
+    "geo": {
+      "lat": 35.60291375970733,
+      "lon": 139.7583206036385,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1061",
+    "name": "MatchMaker Pro",
+    "mcc": "7273",
+    "category": "Dating Services",
+    "risk_level": "HIGH",
+    "avg_amount": 90,
+    "geo": {
+      "lat": -23.33740610343541,
+      "lon": -47.11876947880975,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1062",
+    "name": "InvestPro",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 30.111089019878865,
+      "lon": -95.80993098233425,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1063",
+    "name": "TechZone",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 33.690758171409655,
+      "lon": -117.77416657546479,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1064",
+    "name": "HomeShop Network",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 33.16968281939745,
+      "lon": -112.4426521690908,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1065",
+    "name": "GameVault",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 42.0917653600387,
+      "lon": -88.07776408074551,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1066",
+    "name": "QuickGas - Tokyo",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": 35.51683776220219,
+      "lon": 139.49098087658956,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1067",
+    "name": "Digital Dreams - Mumbai",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 18.644843301025475,
+      "lon": 72.6014415523566,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1068",
+    "name": "Wellness Rx - Chicago",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 41.77667985483206,
+      "lon": -87.74398006268967,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1069",
+    "name": "SpeedFuel",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": 33.53404977449858,
+      "lon": -112.19381478901347,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1070",
+    "name": "TradeFast Securities",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 40.89264940903598,
+      "lon": -74.00640934815581,
+      "city": "New York",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1071",
+    "name": "Virtual Arena",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 18.867248592669604,
+      "lon": 72.39193535191043,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1072",
+    "name": "QuickSell",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 33.36663753128784,
+      "lon": -112.17992816392278,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1073",
+    "name": "QuickGas",
+    "mcc": "5541",
+    "category": "Gas Stations",
+    "risk_level": "LOW",
+    "avg_amount": 60,
+    "geo": {
+      "lat": -23.28816199464641,
+      "lon": -47.02356016509141,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1074",
+    "name": "HealthPlus Pharmacy",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 41.421182953507376,
+      "lon": -87.83645784028374,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1075",
+    "name": "HealthPlus Pharmacy",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 6.737647109461534,
+      "lon": 3.1708579797305774,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1076",
+    "name": "MediCare Drugs",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 18.635625707950123,
+      "lon": 72.47126551418346,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1077",
+    "name": "GameVault",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 35.288788570381314,
+      "lon": 140.09952943199505,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1078",
+    "name": "TradeFast Securities",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 42.13917034707103,
+      "lon": -87.18512353614659,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1079",
+    "name": "QuickSell",
+    "mcc": "5967",
+    "category": "Online Marketplaces",
+    "risk_level": "MEDIUM",
+    "avg_amount": 130,
+    "geo": {
+      "lat": 6.714978317739701,
+      "lon": 2.9287995726866205,
+      "city": "Lagos",
+      "country": "NG"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1080",
+    "name": "FreshMart",
+    "mcc": "5411",
+    "category": "Grocery Stores",
+    "risk_level": "LOW",
+    "avg_amount": 75,
+    "geo": {
+      "lat": 51.934032971988266,
+      "lon": -0.253564075498125,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1081",
+    "name": "GameVault",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 41.95148747747158,
+      "lon": -87.90757081050951,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1082",
+    "name": "Variety Shop - London",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 51.61694174993794,
+      "lon": -0.5048416486486322,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1083",
+    "name": "eSports Hub",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 42.066566467268856,
+      "lon": -87.19818275636013,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1084",
+    "name": "HealthPlus Pharmacy",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 33.303594775851934,
+      "lon": -112.54562024012822,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1085",
+    "name": "TechZone - New York",
+    "mcc": "5732",
+    "category": "Electronics",
+    "risk_level": "HIGH",
+    "avg_amount": 450,
+    "geo": {
+      "lat": 40.455854445930086,
+      "lon": -73.86531446071344,
+      "city": "New York",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1086",
+    "name": "MediCare Drugs",
+    "mcc": "5912",
+    "category": "Pharmacies",
+    "risk_level": "LOW",
+    "avg_amount": 35,
+    "geo": {
+      "lat": 41.674635538631144,
+      "lon": -87.19007831555821,
+      "city": "Chicago",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1087",
+    "name": "Virtual Arena",
+    "mcc": "7995",
+    "category": "Online Gaming",
+    "risk_level": "HIGH",
+    "avg_amount": 200,
+    "geo": {
+      "lat": 34.015965804496325,
+      "lon": -117.99258792320065,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1088",
+    "name": "MegaMart - Houston",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": 29.944733608934165,
+      "lon": -95.50192540428898,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1089",
+    "name": "TradeFast Securities - Tokyo",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 35.204553454984485,
+      "lon": 139.86673801178733,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1090",
+    "name": "HomeShop Network",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 51.20805644856935,
+      "lon": -0.2209273133983599,
+      "city": "London",
+      "country": "GB"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1091",
+    "name": "InvestPro",
+    "mcc": "6211",
+    "category": "Securities",
+    "risk_level": "HIGH",
+    "avg_amount": 1500,
+    "geo": {
+      "lat": 40.83736577471623,
+      "lon": -73.51300467724296,
+      "city": "New York",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1092",
+    "name": "HomeShop Network - Mumbai",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 18.648027858728888,
+      "lon": 73.05895225633847,
+      "city": "Mumbai",
+      "country": "IN"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1093",
+    "name": "DirectDeal",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 34.21292451823704,
+      "lon": -117.82002317313824,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1094",
+    "name": "TeleSale Plus - Tokyo",
+    "mcc": "5960",
+    "category": "Direct Marketing",
+    "risk_level": "HIGH",
+    "avg_amount": 180,
+    "geo": {
+      "lat": 35.95745808725565,
+      "lon": 139.62766570473767,
+      "city": "Tokyo",
+      "country": "JP"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1095",
+    "name": "Variety Shop - S\u00e3o Paulo",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": -23.81375587149011,
+      "lon": -46.811679504554085,
+      "city": "S\u00e3o Paulo",
+      "country": "BR"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1096",
+    "name": "MegaMart",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": 33.78048593611136,
+      "lon": -118.4994199554972,
+      "city": "Los Angeles",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1097",
+    "name": "Variety Shop - Phoenix",
+    "mcc": "5999",
+    "category": "Misc Retail",
+    "risk_level": "MEDIUM",
+    "avg_amount": 85,
+    "geo": {
+      "lat": 33.860983137201224,
+      "lon": -111.85566727567715,
+      "city": "Phoenix",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1098",
+    "name": "Sushi Express - Houston",
+    "mcc": "5812",
+    "category": "Restaurants",
+    "risk_level": "LOW",
+    "avg_amount": 45,
+    "geo": {
+      "lat": 29.51577977873325,
+      "lon": -95.26258998226373,
+      "city": "Houston",
+      "country": "US"
+    }
+  },
+  {
+    "merchant_id": "MRCH-1099",
+    "name": "MegaMart - New York",
+    "mcc": "5311",
+    "category": "Department Stores",
+    "risk_level": "MEDIUM",
+    "avg_amount": 120,
+    "geo": {
+      "lat": 40.67733941266481,
+      "lon": -74.1769280138303,
+      "city": "New York",
+      "country": "US"
+    }
+  }
+]

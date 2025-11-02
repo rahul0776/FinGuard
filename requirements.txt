@@ -1,0 +1,6 @@
+# Root requirements for deployment scripts
+boto3==1.34.20
+aws-sam-cli==1.108.0
+
+
+

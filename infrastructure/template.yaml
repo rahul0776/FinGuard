@@ -1,0 +1,375 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: FinGuard AI - Fraud Detection Demo Infrastructure
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 512
+    Runtime: python3.12
+    Environment:
+      Variables:
+        TRANSACTIONS_TABLE: !Ref TransactionsTable
+        ALERTS_TABLE: !Ref AlertsTable
+        MERCHANTS_TABLE: !Ref MerchantsTable
+        RAW_BUCKET: !Sub 'finguard-raw-${AWS::AccountId}'
+        REPORTS_BUCKET: !Sub 'finguard-reports-${AWS::AccountId}'
+        MODEL_BUCKET: !Sub 'finguard-models-${AWS::AccountId}'
+        WEBSOCKET_ENDPOINT: !Sub 'https://${WebSocketApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+    Tracing: Active
+
+Resources:
+  # DynamoDB Tables
+  TransactionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'finguard-transactions-${AWS::StackName}'
+      BillingMode: PAY_PER_REQUEST  # Free tier compatible
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: card_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: card-index
+          KeySchema:
+            - AttributeName: card_id
+              KeyType: HASH
+            - AttributeName: SK
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      StreamSpecification:
+        StreamViewType: NEW_AND_OLD_IMAGES
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false  # Save costs
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Project
+          Value: FinGuardAI
+
+  AlertsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'finguard-alerts-${AWS::StackName}'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: created_at
+          AttributeType: N
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: created-index
+          KeySchema:
+            - AttributeName: created_at
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      StreamSpecification:
+        StreamViewType: NEW_IMAGE
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Project
+          Value: FinGuardAI
+
+  MerchantsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'finguard-merchants-${AWS::StackName}'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Project
+          Value: FinGuardAI
+
+  # S3 Buckets - Using existing buckets (already created)
+  # Note: Buckets were created manually before deployment
+
+  # Lambda Layer for ML dependencies
+  MLLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      LayerName: !Sub 'finguard-ml-layer-${AWS::StackName}'
+      Description: ML dependencies (scikit-learn, pandas, numpy, joblib)
+      Content:
+        S3Bucket: !Sub 'finguard-models-${AWS::AccountId}'
+        S3Key: layers/ml-layer.zip
+      CompatibleRuntimes:
+        - python3.12
+
+  # Lambda Functions
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub 'finguard-api-${AWS::StackName}'
+      CodeUri: ../api/
+      Handler: main.handler
+      Description: FinGuard FastAPI backend with Mangum
+      MemorySize: 512
+      Timeout: 30
+      Layers:
+        - !Ref MLLayer
+      Environment:
+        Variables:
+          WEBHOOK_SECRET: 'demo-webhook-secret-key'
+          SIMULATOR_FUNCTION: !Sub 'finguard-simulator-${AWS::StackName}'
+          CONNECTIONS_TABLE: !Ref ConnectionsTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TransactionsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref AlertsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref MerchantsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+                - s3:PutObject
+                - s3:DeleteObject
+              Resource:
+                - !Sub 'arn:aws:s3:::finguard-models-${AWS::AccountId}/*'
+                - !Sub 'arn:aws:s3:::finguard-raw-${AWS::AccountId}/*'
+                - !Sub 'arn:aws:s3:::finguard-reports-${AWS::AccountId}/*'
+        - Statement:
+            - Effect: Allow
+              Action:
+                - execute-api:ManageConnections
+                - execute-api:Invoke
+              Resource: !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${WebSocketApi}/*'
+        - Statement:
+            - Effect: Allow
+              Action:
+                - lambda:InvokeFunction
+              Resource: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:finguard-simulator-${AWS::StackName}'
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            RestApiId: !Ref RestApi
+            Path: /{proxy+}
+            Method: ANY
+
+  SimulatorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub 'finguard-simulator-${AWS::StackName}'
+      CodeUri: ../simulator/
+      Handler: handler.lambda_handler
+      Description: Transaction replay simulator
+      MemorySize: 256
+      Timeout: 300  # 5 minutes for full replay
+      Environment:
+        Variables:
+          API_ENDPOINT: !Sub 'https://${RestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+          RAW_BUCKET: !Sub 'finguard-raw-${AWS::AccountId}'
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+              Resource:
+                - !Sub 'arn:aws:s3:::finguard-raw-${AWS::AccountId}/*'
+            - Effect: Allow
+              Action:
+                - lambda:InvokeFunction
+              Resource: !GetAtt ApiFunction.Arn
+
+  WebSocketFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub 'finguard-websocket-${AWS::StackName}'
+      CodeUri: ../api/
+      Handler: websocket.handler
+      Description: WebSocket connection manager
+      MemorySize: 256
+      Layers:
+        - !Ref MLLayer
+      Environment:
+        Variables:
+          CONNECTIONS_TABLE: !Ref ConnectionsTable
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref ConnectionsTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - execute-api:ManageConnections
+              Resource: !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${WebSocketApi}/*'
+
+  # WebSocket Connections Table
+  ConnectionsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'finguard-connections-${AWS::StackName}'
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: connectionId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: connectionId
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  # REST API Gateway
+  RestApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub 'finguard-api-${AWS::StackName}'
+      StageName: Prod
+      Cors:
+        AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        AllowOrigin: "'*'"
+      TracingEnabled: true
+
+  # WebSocket API Gateway
+  WebSocketApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: !Sub 'finguard-websocket-${AWS::StackName}'
+      ProtocolType: WEBSOCKET
+      RouteSelectionExpression: $request.body.action
+
+  ConnectRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref WebSocketApi
+      RouteKey: $connect
+      AuthorizationType: NONE
+      Target: !Join
+        - '/'
+        - - 'integrations'
+          - !Ref ConnectIntegration
+
+  DisconnectRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref WebSocketApi
+      RouteKey: $disconnect
+      AuthorizationType: NONE
+      Target: !Join
+        - '/'
+        - - 'integrations'
+          - !Ref DisconnectIntegration
+
+  ConnectIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref WebSocketApi
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${WebSocketFunction.Arn}/invocations'
+
+  DisconnectIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref WebSocketApi
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${WebSocketFunction.Arn}/invocations'
+
+  WebSocketDeployment:
+    Type: AWS::ApiGatewayV2::Deployment
+    DependsOn:
+      - ConnectRoute
+      - DisconnectRoute
+    Properties:
+      ApiId: !Ref WebSocketApi
+
+  WebSocketStage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref WebSocketApi
+      DeploymentId: !Ref WebSocketDeployment
+      StageName: Prod
+
+  # Lambda Permissions for WebSocket
+  WebSocketConnectPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref WebSocketFunction
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${WebSocketApi}/*'
+
+  # CloudWatch Log Groups (1-day retention for cost savings)
+  ApiLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${ApiFunction}'
+      RetentionInDays: 1
+
+  SimulatorLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${SimulatorFunction}'
+      RetentionInDays: 1
+
+  WebSocketLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${WebSocketFunction}'
+      RetentionInDays: 1
+
+  # Secrets Manager for Webhook Secret
+  # WebhookSecret - Using environment variable instead of Secrets Manager for simplicity
+
+Outputs:
+  ApiEndpoint:
+    Description: REST API Gateway endpoint
+    Value: !Sub 'https://${RestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+    Export:
+      Name: FinGuardApiEndpoint
+
+  WebSocketEndpoint:
+    Description: WebSocket API Gateway endpoint
+    Value: !Sub 'wss://${WebSocketApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
+    Export:
+      Name: FinGuardWebSocketEndpoint
+
+  TransactionsTableName:
+    Description: DynamoDB transactions table
+    Value: !Ref TransactionsTable
+
+  AlertsTableName:
+    Description: DynamoDB alerts table
+    Value: !Ref AlertsTable
+
+  MerchantsTableName:
+    Description: DynamoDB merchants table
+    Value: !Ref MerchantsTable
+
+  ModelBucketName:
+    Description: S3 bucket for ML models
+    Value: !Sub 'finguard-models-${AWS::AccountId}'
+
+  RawDataBucketName:
+    Description: S3 bucket for raw data
+    Value: !Sub 'finguard-raw-${AWS::AccountId}'
+
+  ReportsBucketName:
+    Description: S3 bucket for PDF reports
+    Value: !Sub 'finguard-reports-${AWS::AccountId}'
+

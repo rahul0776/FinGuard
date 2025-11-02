@@ -1,0 +1,6 @@
+# Minimal ML runtime dependencies for Lambda Layer
+numpy==1.26.4
+onnxruntime==1.20.0
+
+
+
