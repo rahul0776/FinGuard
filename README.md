@@ -89,6 +89,52 @@ FinGuard demonstrates a complete, real-world fraud detection solution suitable f
 - **Feature Engineering**: Real-time feature extraction from transaction history
 - **Alert Generation**: Threshold-based alerting with configurable risk levels
 
+## 🚀 Deployment
+
+### Frontend Deployment (Vercel)
+
+The frontend is configured for seamless deployment to Vercel:
+
+1. **Connect Repository**: Link your GitHub/GitLab repository to Vercel
+2. **Set Root Directory**: Configure Vercel to use the `frontend/` directory
+3. **Environment Variables**: Add your AWS API endpoints:
+   - `VITE_API_URL`: Your API Gateway REST endpoint
+   - `VITE_WS_URL`: Your API Gateway WebSocket endpoint
+4. **Deploy**: Vercel will automatically build and deploy on every push
+
+**Quick Deploy via CLI**:
+```bash
+cd frontend
+npm install -g vercel
+vercel
+```
+
+For detailed instructions, see [frontend/VERCEL_DEPLOYMENT.md](frontend/VERCEL_DEPLOYMENT.md).
+
+### Backend Deployment (AWS)
+
+The backend is deployed using AWS SAM. See the main deployment scripts in the `scripts/` directory or follow the AWS SAM deployment guide in the project documentation.
+
+**Deployment Steps**:
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Generate seed data
+python seed-data/generate.py
+
+# 3. Deploy infrastructure
+./scripts/deploy.sh  # or deploy.ps1 for Windows
+
+# 4. Note the API endpoints output after deployment
+```
+
+After backend deployment, you'll receive:
+- REST API endpoint (for `VITE_API_URL`)
+- WebSocket endpoint (for `VITE_WS_URL`)
+
+Use these URLs when configuring Vercel environment variables.
+
 ## 📊 Features
 
 ### 1. Real-Time Transaction Scoring Engine
