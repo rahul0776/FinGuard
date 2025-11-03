@@ -12,10 +12,25 @@ This guide walks you through deploying the FinGuard frontend to Vercel.
 
 ## Step 1: Get Your AWS API Endpoints
 
-After deploying your AWS backend, you'll have:
+**Important**: You must deploy your AWS backend first to get these endpoints.
 
-- **REST API URL**: `https://abc123.execute-api.us-east-1.amazonaws.com/Prod`
-- **WebSocket URL**: `wss://xyz789.execute-api.us-east-1.amazonaws.com/Prod`
+After deploying your AWS backend (using `./scripts/deploy.sh` or `./scripts/deploy.ps1`), you'll see the endpoints printed at the end:
+
+```
+API Endpoint:
+  https://abc123.execute-api.us-east-1.amazonaws.com/Prod
+
+WebSocket Endpoint:
+  wss://xyz789.execute-api.us-east-1.amazonaws.com/Prod
+```
+
+**These are your `VITE_API_URL` and `VITE_WS_URL` values.**
+
+If you didn't save them, you can get them from:
+- **AWS CloudFormation Console** → Your stack → Outputs tab
+- Or run: `aws cloudformation describe-stacks --stack-name finguard-stack --query "Stacks[0].Outputs"`
+
+**For detailed instructions, see [GET_ENDPOINTS.md](../../GET_ENDPOINTS.md) in the root directory.**
 
 Save these URLs for Step 3.
 
@@ -77,11 +92,13 @@ vercel env add VITE_WS_URL production
    - Click **Import**
 
 3. **Configure Project**:
-   - **Root Directory**: Set to `frontend`
-   - **Framework Preset**: Vercel should auto-detect Vite
-   - **Build Command**: `npm run build` (auto-filled)
+   - **Root Directory**: ⚠️ **IMPORTANT**: Set to `frontend` (this is the critical setting)
+   - **Framework Preset**: Vercel should auto-detect Vite, or select "Vite"
+   - **Build Command**: `npm run build` (auto-filled, should work if root directory is correct)
    - **Output Directory**: `dist` (auto-filled)
    - **Install Command**: `npm install` (auto-filled)
+   
+   **If you don't see Root Directory option**: Go to **Settings** → **General** → **Root Directory** and set it to `frontend`
 
 4. **Add Environment Variables** (if not done in Step 3):
    - Add `VITE_API_URL` and `VITE_WS_URL` before deploying
@@ -148,12 +165,28 @@ After deployment:
 - Ensure `vercel.json` is in the `frontend/` directory
 - Redeploy if you just added `vercel.json`
 
-### Issue: Build fails
+### Issue: Build fails - "Could not read package.json: ENOENT"
+
+**Error**: `npm error enoent Could not read package.json: Error: ENOENT: no such file or directory`
+
+**Solution**:
+- **Root Directory not set**: This means Vercel is trying to build from the repository root instead of the `frontend/` directory
+- Go to your Vercel project **Settings** → **General** → **Root Directory**
+- Set it to `frontend` (without trailing slash)
+- Save and redeploy
+
+**If you can't find Root Directory setting**:
+- Create a new deployment or reimport the project
+- During setup, look for "Root Directory" or "Project Root" option
+- Enter `frontend` as the value
+
+### Issue: Build fails (other errors)
 
 **Solution**:
 - Check that all dependencies are in `package.json`
 - Ensure Node.js version is compatible (Vercel uses Node 18+ by default)
 - Check build logs in Vercel dashboard for specific errors
+- Make sure you're deploying from the `main` or `master` branch
 
 ## Environment-Specific Deployments
 

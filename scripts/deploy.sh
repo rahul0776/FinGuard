@@ -89,6 +89,7 @@ sam deploy \
     --stack-name $STACK_NAME \
     --capabilities CAPABILITY_IAM \
     --region $REGION \
+    --resolve-s3 \
     --no-confirm-changeset \
     --no-fail-on-empty-changeset
 cd ..

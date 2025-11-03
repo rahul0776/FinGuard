@@ -148,10 +148,10 @@ def main():
     
     # Load data
     print("\n1. Loading synthetic data...")
-    data_dir = Path("seed-data")
+    data_dir = Path("../seed-data")
     
     transactions_df = pd.read_csv(data_dir / "replay_day_01.csv")
-    with open(data_dir / "merchants.json") as f:
+    with open(data_dir / "merchants.json", encoding='utf-8') as f:
         merchants_data = json.load(f)
     merchants_df = pd.DataFrame(merchants_data)
     

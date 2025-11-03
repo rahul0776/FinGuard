@@ -1,0 +1,28 @@
+{
+  "features": [
+    "amount_log",
+    "merchant_risk_score",
+    "hour",
+    "is_weekend",
+    "is_night",
+    "mcc_num",
+    "txn_velocity_2h",
+    "device_mismatch",
+    "distance_from_home",
+    "geo_jump"
+  ],
+  "feature_importances": [
+    0.3172182629912738,
+    0.047440809173223145,
+    0.14804330977448607,
+    0.0,
+    0.02196580474084881,
+    0.10769061666722891,
+    0.08983492251617159,
+    0.06292330213795998,
+    0.19242979164234808,
+    0.012453180356459545
+  ],
+  "version": "1.0.0",
+  "trained_at": "2025-11-02T19:38:42.100637"
+}

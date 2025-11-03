@@ -169,7 +169,7 @@ export default function AlertDetail() {
                 <Tooltip
                   contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155' }}
                   labelStyle={{ color: '#fff' }}
-                  formatter={(value: number, name: string, props: any) => [
+                  formatter={(_value: number, _name: string, props: any) => [
                     `${props.payload.contribution > 0 ? '+' : ''}${props.payload.contribution.toFixed(4)} (${props.payload.contribution_pct.toFixed(1)}%)`,
                     'Contribution'
                   ]}
