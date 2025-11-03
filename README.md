@@ -6,6 +6,44 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-009688)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB)](https://react.dev)
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Available-green)](https://finguard-sable.vercel.app/)
+
+**🌐 [Try it live →](https://finguard-sable.vercel.app/)**
+
+## 🎯 What is This Project?
+
+**FinGuard** is a real-time fraud detection system for credit card and payment transactions. Think of it as a security guard for financial transactions that watches every payment and instantly flags suspicious activity.
+
+### In Simple Terms:
+
+Imagine you're running a bank or payment service. Every second, hundreds or thousands of transactions come in — purchases, transfers, withdrawals. Some of these might be fraudulent (stolen cards, identity theft, unusual spending patterns). 
+
+**FinGuard automatically:**
+- ✅ **Analyzes every transaction** in real-time (<150ms)
+- ✅ **Detects suspicious patterns** like:
+  - Someone making 5 purchases in 2 minutes (unusual velocity)
+  - A card used in New York, then Tokyo 2 hours later (impossible travel)
+  - A purchase 10x larger than normal (unusual amount)
+  - Transactions from an unrecognized device
+- ✅ **Sends instant alerts** when fraud is detected
+- ✅ **Explains why** a transaction looks suspicious (transparency for analysts)
+
+### Who Would Use This?
+
+- **Fintech Companies**: Payment processors, digital banks, credit card companies
+- **E-commerce Platforms**: Online stores processing payments
+- **Banking Institutions**: Traditional banks monitoring transactions
+- **Financial Security Teams**: Fraud analysts investigating suspicious activity
+
+### Why This Matters:
+
+Without fraud detection, companies lose billions to fraudulent transactions each year. FinGuard demonstrates how modern technology can:
+- Stop fraud in real-time (before money is lost)
+- Scale to handle millions of transactions
+- Provide clear explanations (not just "fraud detected" but "why")
+- Cost almost nothing to run (serverless = pay only for what you use)
+
+**This is a complete, working demo** — you can see it live at [https://finguard-sable.vercel.app/](https://finguard-sable.vercel.app/). Click "Replay Demo Day" to watch it process 5,000 transactions and catch fraud in real-time!
 
 ## 📋 Overview
 
@@ -30,7 +68,9 @@ FinGuard demonstrates a complete, real-world fraud detection solution suitable f
 4. **Explainable Decisions**: Every alert includes feature contributions and triggered rules
 5. **Scalable Architecture**: Serverless design that scales automatically with traffic
 
-**Live Demo**: Open the application → Click "Replay Demo Day" → Watch 5,000 synthetic transactions stream in real-time with fraud alerts lighting up instantly.
+**🌐 Live Demo**: [https://finguard-sable.vercel.app/](https://finguard-sable.vercel.app/)
+
+Open the application → Click "Replay Demo Day" → Watch 5,000 synthetic transactions stream in real-time with fraud alerts lighting up instantly.
 
 ## 🏗️ Architecture
 
