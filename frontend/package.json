@@ -14,7 +14,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
     "recharts": "^2.10.3",
-    "axios": "^1.6.5",
+    "axios": "^1.13.5",
     "lucide-react": "^0.309.0"
   },
   "devDependencies": {
